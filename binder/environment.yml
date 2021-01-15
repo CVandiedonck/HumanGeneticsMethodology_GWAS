@@ -1,0 +1,23 @@
+name: TP-GWAS
+# channels priority
+# see https://bioconda.github.io/
+# conda-forge has highest prioriy
+channels:
+  - default
+  - bioconda
+  - conda-forge
+dependencies:
+  - jupyterlab=2
+  - pandas
+  - nbresuse
+  - python>=3.7
+  - pip
+  - nodejs
+  - r-base>=3.6
+  - rpy2
+  - simplegeneric # for some reasons needed by rpy2
+  - plink=1.90b6.12
+  - r-qqman==0.1.4
+  - numpy
+  - matplotlib
+  - psutil
