@@ -5,22 +5,3 @@ jupyter labextension install \
   jupyterlab-topbar-extension \
   jupyterlab-system-monitor \
   jupyterlab-topbar-text
-
-
-# Install KING: Kinship-based INference for Gwas
-# http://people.virginia.edu/~wc9c/KING/
-# version 2.2.5
-wget https://people.virginia.edu/~wc9c/KING/Linux-king.tar.gz -O king.tar.gz
-tar zxvf king.tar.gz
-
-if [ ! -z ${CONDA_PREFIX} ]
-then
-    mv king ${CONDA_PREFIX}/bin/
-else
-    alternate_path=$HOME/.local/bin
-    mkdir -p ${alternate_path}
-    mv king ${alternate_path}
-    export PATH=$PATH:${alternate_path}
-fi
-
-rm -f king.tar.gz
